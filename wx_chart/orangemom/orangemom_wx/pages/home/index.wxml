@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container home">
+    
+    <view class='imgList'>
+        <image src='./../../res/2.jpg'  mode='widthFix'></image>
+        <image src='./../../res/1.jpg'  mode='widthFix'></image>
+        <image src='./../../res/3.jpg'  mode='widthFix'></image>
+        <image src='./../../res/4.jpg'  mode='widthFix'></image>
+        <image src='./../../res/5.jpg'  mode='widthFix'></image>
+        <image src='./../../res/6.jpg'  mode='widthFix'></image>
+        <image src='./../../res/7.jpg'  mode='widthFix'></image>
+        <image src='./../../res/8.jpg'  mode='widthFix'></image>
+    </view>
+    
+</view>

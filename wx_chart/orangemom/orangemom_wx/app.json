@@ -1,0 +1,15 @@
+{
+    "pages":[
+        
+        "pages/index/index",
+        "pages/home/index",
+        "pages/auth/index"
+        
+    ],
+    "window":{
+        "backgroundTextStyle":"light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "子理妈妈果园",
+        "navigationBarTextStyle":"black"
+    }
+}

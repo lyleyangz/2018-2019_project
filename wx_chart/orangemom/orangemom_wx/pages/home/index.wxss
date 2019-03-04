@@ -1,0 +1,7 @@
+.home .scroll-view {
+    height: 100vh
+}
+.home .imgList image{
+    width: 100%;
+    display: flex;
+}
