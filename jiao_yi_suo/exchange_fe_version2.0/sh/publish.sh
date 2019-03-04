@@ -1,0 +1,1 @@
+npm run gulp && npm run clean:svg && npm run icons && npm run build

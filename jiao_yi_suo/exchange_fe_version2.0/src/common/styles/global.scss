@@ -1,0 +1,218 @@
+// 常用公共样式
+.f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-cb,.f-cbli li{zoom:1;}
+.f-ib{display:inline-block;*display:inline;*zoom:1;}
+.f-dn{display:none;}
+.f-db{display:block;}
+.f-fl{float:left;}
+.f-fr{float:right;}
+.f-pr{position:relative;}
+.f-prz{position:relative;zoom:1;}
+.f-pa{position: absolute;}
+.f-oh{overflow:hidden;}
+.f-ff0{font-family:arial,\5b8b\4f53;}
+.f-ff1{font-family:"Microsoft YaHei",\5fae\8f6f\96c5\9ed1,arial,\5b8b\4f53;}
+.f-fs1{font-size:12px;}
+.f-fs2{font-size:14px;}
+.f-fs16{font-size: 16px;}
+.f-fs18{font-size: 18px !important;}
+.f-dib{display: inline-block;}
+.ml-10{margin-left: 10px !important}
+.bg-full-center {background-size: 100% 100%;background-position: center center;}
+.wholeInner {width: 100%;height: 100%;}
+.over2line {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;line-height: 1.2}
+.over1line {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;line-height: 1.2}
+
+html, body { width: 100%;height: 100%;color: #333333;min-width: 1400px;}
+
+// 定义一个版心的最小宽度
+.typepage {
+    min-width: 1200px;
+    max-width: 1500px;
+}
+
+// input框为number时，去除上下箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+// input框placeholder颜色
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #999999 !important;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999999 !important;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999999 !important;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #999999 !important;
+}
+
+// 去掉input框的自动黄底
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+// 引入字体文件
+
+@font-face {
+    font-family: 'fanti';
+    src: url('../assets/font/tengxiangjialifanti.ttf');
+    src:
+      url('../assets/font/tengxiangjialifanti.eot?#iefix') format('embedded-opentype'),
+      /*url('font/腾祥嘉丽中黑繁.woff') format('woff'),*/
+      url('../assets/font/tengxiangjialifanti.ttf') format('truetype')
+      ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// 引入setting中的颜色配置
+@import '../settings/colorOptions.scss';
+.upColor {
+    color: $upColor !important;
+}
+.upBgColor {
+    background-color: $upColor !important;
+}
+.downColor {
+    color: $downColor !important;
+}
+.downBgColor {
+    background-color: $downColor !important;
+}
+// fade动画
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+// scrollRight动画
+.scrollRight-enter-active, .scrollRight-leave-active {
+    transition: opacity .3s;
+    transition: transform .3s;
+}
+.scrollRight-enter, .scrollRight-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transform: translateX(200%);
+    opacity: 0;
+}
+.ivu-input{font-size: 14px !important;}
+
+.header-outer {
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 30px;
+    z-index: 99;
+}
+.riseandfall-outer {
+    width: 100%;
+    background-color: #222222;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    .riseandfall {
+        width: 1200px !important;
+        height: 30px;
+        margin: 0 auto !important;
+    }
+}
+
+.ivu-page{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.ivu-page-item-active{
+    background-color: #ff8a00 !important;
+    border-color: #ff8a00 !important;
+}
+.ivu-modal-mask, .ivu-modal-wrap {
+    z-index: 999999 !important;
+}
+
+.logo.BTC{
+    width: 17px;
+    height: 17px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/btc.png');
+}
+.logo.CFC{
+    width: 17px;
+    height: 17px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/cfc.png');
+}
+.logo.CSC{
+    width: 17px;
+    height: 19px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/cSc.png');
+}
+.logo.ETH{
+    width: 13px;
+    height: 18px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/eth.png');
+}
+.logo.FTCT{
+    width: 17px;
+    height: 17px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/ftct.png');
+}
+.logo.DOGE{
+    width: 17px;
+    height: 17px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/doge.png');
+}
+.logo.NLC{
+    width: 17px;
+    height: 17px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/nlc.png');
+}
+.logo.SWTC{
+    width: 17px;
+    height: 17px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/swtc.png');
+}
+.logo.VAC{
+    width: 17px;
+    height: 19px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/vac.png');
+}
+.logo.LTC{
+    width: 17px;
+    height: 19px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/ltc.png');
+}
+.logo.XRP{
+    width: 17px;
+    height: 17px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/xrp.png');
+}
+.logo.VAAC{
+    width: 17px;
+    height: 17px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/logo/vaac.png');
+}

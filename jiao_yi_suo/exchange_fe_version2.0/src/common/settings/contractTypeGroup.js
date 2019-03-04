@@ -1,0 +1,45 @@
+// 兑换方式
+const contractTypeGroup = {
+    1: 'HKD_BTC',
+    2: 'HKD_ETH',
+    3: 'HKD_LTC',
+    4: 'HKD_XRP',
+    5: 'HKD_VAAC',
+    11: 'USD_BTC',
+    12: 'USD_ETH',
+    13: 'USD_LTC',
+    14: 'USD_XRP',
+    15: 'USD_VAAC',
+    21: 'XRP_VAAC',
+    22: 'XRP_ETH',
+    23: 'XRP_LTC',
+    24: 'XRP_BTC',
+    41: 'VAAC_ETH',
+    42: 'VAAC_LTC',
+    43: 'VAAC_XRP',
+    44: 'VAAC_BTC',
+
+    71: 'BTC_ETH',
+    72: 'BTC_LTC',
+    73: 'BTC_XRP',
+    74: 'BTC_VAAC',
+    75: 'BTC_CSC',
+    76: 'BTC_CFC',
+    77: 'BTC_NLC',
+    78: 'BTC_FTCT',
+    79: 'BTC_DOGE',
+    80: 'BTC_SWTC',
+
+    91: 'ETH_BTC',
+    92: 'ETH_LTC',
+    93: 'ETH_XRP',
+    94: 'ETH_VAAC',
+    95: 'ETH_CSC',
+    96: 'ETH_CFC',
+    97: 'ETH_NLC',
+    98: 'ETH_FTCT',
+    99: 'ETH_DOGE',
+    100: 'ETH_SWTC'
+    
+}
+export default contractTypeGroup;

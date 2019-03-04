@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<title>TradingView Charting Library demo</title>
+
+		<!-- Fix for iOS Safari zooming bug -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		
+		<script type="text/javascript" src="charting_library/charting_library.min.js"></script>
+
+		<script type="text/javascript" src="datafeeds/udf/dist/polyfills.js"></script>
+		<script type="text/javascript" src="datafeeds/udf/dist/bundle.js"></script>
+
+		<style>
+
+		</style>
+
+		<script type="text/javascript">
+
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+
+			TradingView.onready(function(callback){
+				var widget = window.tvWidget = new TradingView.widget({
+					// debug: true, // uncomment this line to see Library errors and warnings in the console
+					fullscreen: true,
+					symbol: 'BTC',
+					interval: '30',
+					container_id: "tv_chart_container",
+					timeframe:'200D',
+					timezone: "Etc/UTC", // 初始时区 可参看 https://zlq4863947.gitbooks.io/tradingview/book/Symbology.html#timezone
+					//	BEWARE: no trailing slash is expected in feed URL
+					datafeed: new Datafeeds.UDFCompatibleDatafeed(location.origin,2000,{
+						t: Math.random(),
+						offset :0,
+						count:1000,
+						kType: getParameterByName('kType') || 3,
+						contractType: getParameterByName('contractType') || 71,
+					}),
+					library_path: "charting_library/",
+					locale: getParameterByName('lang') || "zh", // 国际化
+					//	Regression Trend-related functionality is not implemented yet, so it's hidden for a while
+					drawings_access: { type: 'black', tools: [ { name: "Regression Trend" } ] },
+					// 图表互动功能隐藏 可参考 https://zlq4863947.gitbooks.io/tradingview/book/Featuresets.html
+					disabled_features: [
+						'header_indicators',
+						'header_undo_redo',
+						'use_localstorage_for_settings',
+						// 'left_toolbar',
+						'header_resolutions',
+						// 'header_chart_type',
+						'symbol_info',
+						// 'source_selection_markers',
+						'legend_context_menu',
+						'dont_show_boolean_study_arguments',
+						'header_settings',
+						'header_compare',
+						'header_fullscreen_button',
+						'timeframes_toolbar',
+						'edit_buttons_in_legend',
+						'header_symbol_search',
+						'compare_symbol',
+						'main_series_scale_menu',
+						"save_chart_properties_to_local_storage",
+						"volume_force_overlay",
+						"timezone_menu",
+						"go_to_date",
+					],
+					enabled_features: ["study_templates",'header_saveload_to_the_right'],
+					// volume 覆盖样式  参考：https://zlq4863947.gitbooks.io/tradingview/book/Overrides.html
+					toolbar_bg:"#1a1e28",  //图表颜色
+					overrides: {
+						"volumePaneSize": "medium",
+						"paneProperties.background": "#1a1e28",
+						"paneProperties.vertGridProperties.color": "#1f232d",
+						"paneProperties.horzGridProperties.color": "#1f232d",
+						"paneProperties.crossHairProperties.color": "#1f232d",
+						// 红色    DC143C
+						"scalesProperties.backgroundColor" : "#DC143C",  
+						"scalesProperties.lineColor" : "#747474",
+						"scalesProperties.textColor" : "#747474",
+						"mainSeriesProperties.style": 1
+					},
+					studies_overrides: {
+						"volume.volume.color.0": "#EB4D5C",  // 跌
+						"volume.volume.color.1": "#03BB84",  // 涨
+					},
+					charts_storage_url: 'http://saveload.tradingview.com',
+                    charts_storage_api_version: "1.1",
+					client_id: 'tradingview.com',
+					user_id: 'public_user_id',
+					favorites: {
+						chartTypes: ['Candles','Area']
+					}
+				});
+				widget.onChartReady(function() {
+					widget.chart().createStudy('Moving Average Exponential', false, false, [5, "close"], null, {"Plot.color" : "#7f2068"});
+					widget.chart().createStudy('Moving Average Exponential', false, false, [10, "close"], null, {"Plot.color" : "#3c774c"});
+					widget.chart().createStudy('Moving Average Exponential', false, false, [15, "close"], null, {"Plot.color" : "#5e7798"});
+					widget.chart().createStudy('Moving Average Exponential', false, false, [20, "close"], null, {"Plot.color" : "#69468d"});
+				});
+				// widget.chart().createStudy('Moving Average Exponential', false, false, [5, "close"], null, {"Plot.color" : "red"})
+			});
+
+		</script>
+
+	</head>
+
+	<body style="margin:0px;">
+		<div id="tv_chart_container"></div>
+	</body>
+
+</html>

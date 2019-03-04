@@ -1,0 +1,33 @@
+
+.top{
+    display: none;
+}
+
+.quick .apply-common-tooltip.selected svg{
+    fill: #ff8a00 !important;
+}
+
+.feature-no-touch .button-12d2ecdm-.isActive-2rPH92mZ- .icon-1Aj0C0n9- svg, html.theme-dark.feature-no-touch .button-12d2ecdm-.isActive-2rPH92mZ- .icon-1Aj0C0n9- svg{
+    fill: #ff8a00 !important;
+}
+.favored-list-container.active span.submenu, .favored-list-container span.submenu.active{
+    color: #ff8a00;
+    
+}
+.button-12d2ecdm-.isActive-2rPH92mZ-, html.theme-dark .button-12d2ecdm-.isActive-2rPH92mZ-{
+    color: #ff8a00 !important;
+}
+.separator-3cgsM4c1-{
+    background-color: #292c33;
+}
+
+.feature-no-touch .favored-list-container span:hover::before,.fullscreen:hover::before{
+    border: 0 !important;
+}
+
+.pane-legend-minbtn,.apply-overflow-tooltip{
+    display: none !important;
+}
+.chart-markup-table tr:nth-child(3) .pane-legend-item-value-wrap:nth-child(2) .pane-legend-line{
+    display: none !important;
+}
