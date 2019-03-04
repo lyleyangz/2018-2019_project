@@ -1,0 +1,366 @@
+// 常用公共样式
+//
+//
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+}
+
+.f-cb:after,
+.f-cbli li:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}
+
+.f-cb,
+.f-cbli li {
+    zoom: 1;
+}
+
+.f-ib {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.f-dn {
+    display: none;
+}
+
+.f-db {
+    display: block;
+}
+
+.f-fl {
+    float: left;
+}
+
+.f-fr {
+    float: right;
+}
+
+.f-pr {
+    position: relative;
+}
+
+.f-prz {
+    position: relative;
+    zoom: 1;
+}
+
+.f-pa {
+    position: absolute;
+}
+
+.f-oh {
+    overflow: hidden;
+}
+
+.f-ff0 {
+    font-family: arial, \5b8b\4f53;
+}
+
+.f-ff1 {
+    font-family: "Microsoft YaHei", \5fae\8f6f\96c5\9ed1, arial, \5b8b\4f53;
+}
+
+.f-fs1 {
+    font-size: 12px;
+}
+
+.f-fs2 {
+    font-size: 14px;
+}
+
+.f-dib {
+    display: inline-block;
+}
+
+.bg-full-center {
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.wholeInner {
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    font-family: Microsoft YaHei, '微软雅黑', Arial, Tahoma, Helvetica, Georgia, 'STXihei', '华文黑体', Hei;
+}
+
+.f-cb:after,
+.f-cbli li:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}
+
+.f-cb,
+.f-cbli li {
+    zoom: 1;
+}
+
+.f-ib {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.f-dn {
+    display: none;
+}
+
+.f-db {
+    display: block;
+}
+
+.f-fl {
+    float: left;
+}
+
+.f-fr {
+    float: right;
+}
+
+.f-pr {
+    position: relative;
+}
+
+.f-prz {
+    position: relative;
+    zoom: 1;
+}
+
+.f-pa {
+    position: absolute;
+}
+
+.f-oh {
+    overflow: hidden;
+}
+
+.f-ff0 {
+    font-family: arial, \5b8b\4f53;
+}
+
+.f-ff1 {
+    font-family: "Microsoft YaHei", \5fae\8f6f\96c5\9ed1, arial, \5b8b\4f53;
+}
+
+.f-fs1 {
+    font-size: 12px;
+}
+
+.f-fs2 {
+    font-size: 14px;
+}
+
+.f-dib {
+    display: inline-block;
+}
+
+.bg-full-center {
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.wholeInner {
+    width: 100%;
+    height: 100%;
+}
+
+.over2line {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 1.2
+}
+
+.over1line {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.2
+}
+
+.over2line {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 1.2
+}
+
+.over1line {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.2
+}
+
+// input框为number时，去除上下箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+// input框placeholder颜色
+input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #999999 !important;
+    font-family: 'Microsoft YaHei', Helvetica, Tahoma, Arial !important;
+    font-size: 14px !important;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999999 !important;
+    font-family: 'Microsoft YaHei', Helvetica, Tahoma, Arial,  !important;
+    font-size: 14px !important;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999999 !important;
+    font-family: 'Microsoft YaHei', Helvetica, Tahoma, Arial,  !important;
+    font-size: 14px !important;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #999999 !important;
+    font-family: 'Microsoft YaHei', Helvetica, Tahoma, Arial,  !important;
+    font-size: 14px !important;
+}
+
+// 去掉input框的自动黄底
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+// 引入字体文件
+// @font-face {
+//     font-family: 'fanti';
+//     src: url('../assets/font/tengxiangjialifanti.ttf');
+//     src:
+//       url('../assets/font/tengxiangjialifanti.eot?#iefix') format('embedded-opentype'),
+//       /*url('font/腾祥嘉丽中黑繁.woff') format('woff'),*/
+//       url('../assets/font/tengxiangjialifanti.ttf') format('truetype')
+//       ;
+//     font-weight: normal;
+//     font-style: normal;
+// }
+// scale动画
+.scale-enter-active,
+.scale-leave-active {
+    transition: transform .2s;
+}
+
+.scale-enter,
+.scale-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+    {
+    transform: scale(0);
+}
+
+// scrollFromTop动画
+.scrollFromTop-enter-active,
+.scrollFromTop-leave-active {
+    transition: transform .2s;
+}
+
+.scrollFromTop-enter,
+.scrollFromTop-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+    {
+    transform: translateY(-1000px);
+}
+
+// fade动画
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+    {
+    opacity: 0;
+}
+
+.ivu-spin-large .ivu-spin-dot {
+    width: 52px !important;
+    height: 52px !important;
+}
+
+.page-board {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.page {
+    text-align: center;
+    padding-bottom: 110px;
+    font-size: 16px;
+}
+
+.content-info {
+    font-size: 14px;
+    color: #999999;
+
+    p {
+        font-size: 14px;
+        color: #999999;
+    }
+}
+
+// 面包屑
+.ivu-breadcrumb-item-link,
+.ivu-breadcrumb-item-separator {
+    font-size: 16px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+}
+
+.ivu-page.mini .ivu-page-item {
+    border-radius: 50%;
+}
+
+.loading {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: url('../../common/assets/images/loading.gif');
+        width: 32px;
+        height: 32px;
+        margin: 0 0 0 -16px;
+        left: 50%;
+        top: 30%;
+    }
+}
