@@ -1,0 +1,134 @@
+@import "../../../../common/styles/mixin.scss";
+.register{
+    input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: #666666 !important;
+        @include font-dpr(12px);
+    }
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #666666 !important;
+        @include font-dpr(12px);
+    }
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #666666 !important;
+        @include font-dpr(12px);
+    }
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #666666 !important;
+        @include font-dpr(12px);
+    }
+    .bg{
+        position: relative;
+        
+        img{
+            width: 100%;
+            display: inherit;
+        }
+    }
+    .cnt{
+        position: absolute;
+        top: 0;
+        left: 0;
+        // width: 100%;
+        // display: flex;
+        // justify-content: center;
+        .register-btn{
+            width: 3.466667rem;
+            height: 1.013333rem;
+            background: url('../../../../common/assets/images/spread/btn.png') no-repeat;
+            background-size: cover;
+            margin: 7rem auto 0 auto;
+        }
+        .block{       
+            width: 5.6rem;     
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: .133333rem;
+            margin: 2.2rem .586667rem 0 .586667rem;
+            // width: 100%;
+            padding: .56rem 1.613333rem .573333rem 1.6rem;
+            .title{
+                @include font-dpr(14px);
+                color: #000000;
+                margin-bottom: .586667rem;
+            }
+            .ipt{
+                border-bottom: 1px solid rgba(112, 112, 112, 1);
+                height: 0.9rem;
+                display: flex;
+                align-items: center;
+                input{
+                    border: 0;
+                    width: 1px;
+                    @include font-dpr(12px);
+                    height: 0.9rem;
+                    padding: 0 0 0 0.05rem;   
+                }
+                .col{
+                    flex: 1;
+                }
+                .code{
+                    border-radius: 5px 5px 5px 5px;
+                    border: solid 1px rgba(254, 36, 43, 1);
+                    color: rgba(254, 36, 43, 1);
+                    height: .45rem;
+                    padding:0 .15rem;
+                    @include font-dpr(12px);
+                    margin:0 .133333rem 0 0.1rem 0;
+                }
+                i{
+                    display: inline-block;
+                }
+                .phone{
+                    width: .266667rem;
+                    height: .426667rem;
+                    background: url('../../../../common/assets/images/spread/icon1.png') no-repeat;
+                    background-size: cover;
+                    margin: 0 0.16rem 0 .16rem;
+                }
+                .vercode{
+                    width: .48rem;
+                    height: .32rem;
+                    background: url('../../../../common/assets/images/spread/icon2.png') no-repeat;
+                    background-size: cover;
+                    margin: 0 .08rem 0 .053333rem;
+                }
+                .pwd{
+                    width: .32rem;
+                    height: .4rem;
+                    background: url('../../../../common/assets/images/spread/icon3.png') no-repeat;
+                    background-size: cover;
+                    margin: 0 .106667rem 0 .16rem;
+                }
+            }
+            .agreement{
+                display: flex;
+                align-items: center;
+                margin-top: .24rem;
+                input{
+                    border: solid 1px rgba(112, 112, 112, 1);
+                    margin: 0 .133333rem 0 .16rem;
+                }
+            }
+            .btn{
+                width: 4.493333rem;
+                height: .76rem;
+                text-align: center;
+                line-height: 0.76rem;
+                color: #ffffff;
+                background-color: rgba(254, 36, 43, 1);
+                border-radius: .373333rem;
+                margin: 32px auto 0 auto;
+                @include font-dpr(14px);
+                
+            }
+        }
+        .tip{
+            padding:2.1rem  2rem 0 1.7rem;
+            @include font-dpr(10px);
+            line-height: .4rem;
+            p{
+                margin-bottom: .3rem;
+            }
+        }
+    }
+    
+}

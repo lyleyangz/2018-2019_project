@@ -1,0 +1,115 @@
+@import "../../../../../common/styles/mixin.scss";
+.orderDetail{
+    padding: .093333rem 0 0 0;
+    min-height: 100vh;
+    background: #F0F0F0;
+    .cnt{
+        padding: 0 .106667rem 0.3rem .106667rem;
+        color: #333333;
+        @include font-dpr(13px);
+        .address{
+            background: #fff;
+            padding: .466667rem .186667rem;
+            box-shadow: 0px 2px 10px 0px rgba(153, 153, 153, 0.35);
+            border-radius: .133333rem;
+            line-height: .4rem;
+            .mt{
+                margin-top: .266667rem;
+            }
+        }     
+        .info{
+            background: #fff;
+            box-shadow: 0px 2px 10px 0px rgba(153, 153, 153, 0.35);
+            border-radius: .133333rem;
+            padding: .346667rem .2rem ;
+            margin-top: .266667rem;
+            line-height: .4rem; 
+            .name{
+                margin-bottom: .226667rem;
+                @include font-dpr(14px);
+            }
+            .price{
+                @include font-dpr(12px);
+                margin-bottom: .226667rem;
+            }
+            .sku{
+                @include font-dpr(12px);
+                margin-bottom: .32rem;
+            }
+            .status{
+                line-height: .4rem;
+                color: #ff0000;
+                margin-top: .133333rem;
+            }
+            .receive{
+                color: #1bc07e;
+            }
+            .line{
+                @include font-dpr(12px);
+                padding: .32rem 0;
+                border-top: 1px solid rgba(230, 230, 230, 1);
+                >div{
+                    line-height: .4rem; 
+                    padding-top: .226667rem;
+                    &:nth-child(1){
+                        padding-top: 0;
+                    }
+                }
+                .total{
+                    @include font-dpr(14px);
+                }
+            }
+            .endtoken{
+                color: #666666;
+                @include font-dpr(12px);
+            }
+            .data{
+                @include font-dpr(11px);
+                color: #666666;
+            }
+            .img{
+                width: 100%;
+                height: 4.8rem;
+                margin: .266667rem 0 .36rem 0;
+            }
+            .red{
+                color: #ff0000
+            }
+            .token{
+                label{
+                    color: #16b773;
+                }
+            }
+            .opt{
+                text-align: center;
+                color: #666666;
+                margin: 0 0 .986667rem 0;
+                .row{
+                    margin-bottom: .2rem;
+                    justify-content: center;
+                    align-items: center;
+                    >div{
+                        margin-top: 1.173333rem;
+                        width: 2.666667rem;
+                        height: .6rem;
+                        line-height: .6rem;
+                        border-radius: .133333rem;
+                        margin-left: 0.5rem;
+                        border:1px solid rgba(22, 183, 115, 1);
+                        &:nth-child(1){
+                            margin-left: 0;
+                        }
+                    }
+                }
+                .btn{
+                    background-color: rgba(22, 183, 115, 1);
+                    color: #fff;
+                }
+                .btn-inner{
+                    color: rgba(22, 183, 115, 1);
+                    
+                }
+            }
+        }   
+    }
+}

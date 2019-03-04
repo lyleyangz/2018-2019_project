@@ -1,0 +1,39 @@
+@import "../../../../../common/styles/mixin.scss";
+.logistics{
+    padding: 40px 0 0 0;
+    .cnt{
+        .logistics-top{
+            text-align: center;
+            color: #333333;
+            @include font-dpr(13px);
+            line-height: .4rem;
+            .icon{
+                width: 1.76rem;
+                height: 1.28rem;
+                background: url('../../../../../common/assets/images/logistics.png') no-repeat;
+                background-size: cover;
+                display: block;
+                margin: 1.106667rem auto .4rem auto;
+            }
+            .lb{
+                color: #999999;
+                @include font-dpr(12px);
+                margin-top: .146667rem;
+            }
+        }
+        .list{
+            padding: .88rem .586667rem 0 .586667rem;
+            @include font-dpr(12px);
+            color: #666666;
+            line-height: .4rem;
+            .item{
+                margin-bottom: .306667rem;
+                .data{
+                    margin-bottom: .173333rem
+                }
+
+            }
+        }
+       
+    }
+}

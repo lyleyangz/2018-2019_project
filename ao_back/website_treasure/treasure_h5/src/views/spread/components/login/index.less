@@ -1,0 +1,74 @@
+@import "../../../../common/styles/mixin.scss";
+.login{
+    input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: #666666 !important;
+        @include font-dpr(13px);
+    }
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #666666 !important;
+        @include font-dpr(13px);
+    }
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #666666 !important;
+        @include font-dpr(13px);
+    }
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #666666 !important;
+        @include font-dpr(13px);
+    }
+    img{
+        width: 100%;
+        min-height: 6.6rem;
+    }
+    .title{
+        @include font-dpr(17px);
+        margin: .506667rem 0 .973333rem 0;
+        text-align: center;
+    }
+    .ipt{
+        padding: 0 1.413333rem;
+        >div{
+            display: flex;
+            align-items: center;
+            .col{
+                width: 100%;
+                border-bottom: 1px solid #bfbfbf;
+            }
+            input{
+                width: 100%;
+                height: 1rem;
+                border: 0;
+                @include font-dpr(13px);
+            }   
+        }
+        i{
+            display: inline-block;
+        }
+        .phone{
+            width: .253333rem;
+            height: .373333rem;
+            background: url('../../../../common/assets/images/spread/icon1.png') no-repeat;
+            background-size: cover;
+            margin: 0 .253333rem 0 0;
+        }
+        .pwd{
+            width: .306667rem;
+            height: .386667rem;
+            background: url('../../../../common/assets/images/spread/icon3.png') no-repeat;
+            background-size: cover;
+            margin: 0 .226667rem 0 0;
+        }
+        .btn{
+            padding: 1.186667rem .32rem 0 .32rem;
+            div{
+                width: 100%;
+                height: .933333rem;
+                line-height: .933333rem;
+                background-color: #008ce6;
+                border-radius: .053333rem;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+}

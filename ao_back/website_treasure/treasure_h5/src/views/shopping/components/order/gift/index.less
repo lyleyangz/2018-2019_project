@@ -1,0 +1,151 @@
+@import "../../../../../common/styles/mixin.scss";
+.gift{
+    .tab{
+        height: 1.066667rem;
+        background: #F5F5F5;
+        padding: 0 0 .12rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        .col{
+            background-color: #fff;
+            text-align: center;
+            line-height: .946667rem;
+            color: #333333;
+            @include font-dpr(13px);
+            &.active{
+                background-color: #16b673;
+                color: #fff;
+            }
+            &:nth-child(1){
+                margin: 0 0 0 0.2rem;
+            }
+            &:last-child{
+                margin: 0 0.2rem 0 0;
+            }
+        }
+    }
+    .cnt{
+        padding: 1.186667rem 0 0 0;
+        .giftList{
+            .giftItem{
+                background-color: #fff;
+                border-bottom: .24rem solid #F5F5F5;
+                padding: .266667rem .2rem .213333rem .2rem;
+                
+                .info{
+                    @include font-dpr(13px);
+                    img{
+                        width: 3.733333rem;
+                        height: 2.986667rem;
+                        margin-right: .173333rem;
+                        display: flex;
+                    }
+                    .name{
+                        color: #333333;
+                        @include font-dpr(13px);
+                    }
+                    .num{
+                        @include font-dpr(11px);
+                        color: #666666;
+                        margin-top: .45rem;
+                    }
+                    .price{
+                        @include font-dpr(11px);
+                        color: #666666;
+                    }
+                    .data{
+                        @include font-dpr(10px);
+                        color: #999999;
+                    }
+                    .btn{
+                        button{
+                            @include font-dpr(11px);
+                            padding: 0 .2rem;
+                            height: .533333rem;
+                            border: solid 1px #16b673;
+                            background-color: #fff;
+                            color: #00cc66;
+                            margin: .12rem .4rem .12rem 0;
+                        }
+                    }
+                    .status1,.status3{
+                        color: #ff0000;
+                    }
+                    .status2{
+                        color: #16b673;
+                    }
+                    .lb{
+                        color: #666666;
+                        margin: 0.16rem 0;
+                        @include font-dpr(11px);
+                    }
+                }
+                .give{
+                    .name{
+                        line-height: .4rem;
+                        margin: .293333rem 0 .186667rem 0;
+                        color: #333333;
+                        @include font-dpr(12px);
+                    }
+                    .remark{
+                        border: solid 1px #bfbfbf;
+                        background-color: #f1f1f1;
+                        padding: .266667rem .466667rem .293333rem .16rem;
+                        color: #999999;
+                        line-height: .346667rem;
+                        @include font-dpr(10px);
+                    }
+                }
+                .chain{
+                    margin-top: .386667rem;
+                    .title{
+                        border-bottom: solid 1px #bfbfbf;
+                        padding-bottom: .16rem;
+                        @include font-dpr(13px);
+                        color: #333333;
+                        line-height: .4rem;
+                    }
+                    .imgList{
+                        padding: .373333rem 0 .626667rem .146667rem;
+                        align-items: center;
+                        img{
+                            width: 1.146667rem;
+                            height: 1.146667rem;
+                            border-radius: 50%;
+                            margin-left: .186667rem;
+                            &:nth-child(1){
+                                margin-left: 0;
+                            }
+                        }
+                        .arrow{
+                            background: url('../../../../../common/assets/images/arrow.png') no-repeat;
+                            width: .173333rem;
+                            height: .306667rem;
+                            background-size: cover;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+   
+}
+.nodata{
+    text-align: center;
+    img{
+      width: 5.466667rem;
+      height: 5.333333rem;
+      margin: 4rem auto 0.5rem auto;
+      display: block;
+    }
+    .lb{
+      
+      @include font-dpr(14px);
+      color: #999;
+      display: block;
+      letter-spacing:.08rem;
+    }
+}

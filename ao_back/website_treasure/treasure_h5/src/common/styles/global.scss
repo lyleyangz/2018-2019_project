@@ -1,0 +1,179 @@
+@import './mixin.scss';
+// 常用公共样式
+.f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-cb,.f-cbli li{zoom:1;}
+.f-ib{display:inline-block;*display:inline;*zoom:1;}
+.f-dn{display:none;}
+.f-db{display:block;}
+.f-fl{float:left;}
+.f-fr{float:right;}
+.f-pr{position:relative;}
+.f-prz{position:relative;zoom:1;}
+.f-pa{position: absolute;}
+.f-oh{overflow:hidden;}
+.f-ff0{font-family:arial,\5b8b\4f53;}
+.f-ff1{font-family:"Microsoft YaHei",\5fae\8f6f\96c5\9ed1,arial,\5b8b\4f53;}
+.f-fs1{font-size:12px;}
+.f-fs2{font-size:14px;}
+.f-dib{display: inline-block;}
+.W{width: 100%;}
+.bg-full-center {background-size: 100% 100%;background-position: center center;}
+.wholeInner {width: 100%;height: 100%;}
+.over2line {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;line-height: 1.2}
+.over1line {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;line-height: 1.2}
+
+html, body { height: 100%;color: #333333;max-width: 1280px;margin: 0 auto;background-color: #F4F4F4;
+    font-family: Microsoft YaHei,'微软雅黑', Arial,Tahoma,Helvetica, Georgia,'STXihei','华文黑体',Hei;background: transparent;}
+a:hover{text-decoration:none}
+// input框为number时，去除上下箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+// input框placeholder颜色
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #aaaaaa !important;
+    @include font-dpr(14px);
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #aaaaaa !important;
+    @include font-dpr(14px);
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #aaaaaa !important;
+    @include font-dpr(14px);
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #aaaaaa !important;
+    @include font-dpr(14px);
+}
+
+// 去掉input框的自动黄底
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+.mint-header{
+    background: #fff;
+    color: #333;
+    z-index: 999;
+    // height: 50px;
+    // padding-top: 16px !important;
+}
+.mint-header-title{@include font-dpr(16px);}
+.myHeader.mint-header{
+    border-bottom: solid 1px #cccccc;
+    color: #333333;z-index: 999;
+}
+
+.mint-tabbar > .mint-tab-item.is-selected{
+    background-color: transparent;
+    color: #333333;
+}
+
+
+.row{
+    display: flex;
+    .col{
+        flex: 1;
+    }
+}
+.row-wrap{
+    flex-flow: wrap;
+}
+.page-wrap {
+    overflow: auto;
+    // height: 100%;
+    padding:40px 0 0 0;
+}
+.mintui-back.right{
+    transform:rotate(180deg);
+    color: #999;
+}
+.btn-gradient{
+    text-align: center;
+    @include font-dpr(14px);
+    background:-webkit-linear-gradient(left,#F7A525,#F9D05A);
+    background:-o-linear-gradient(right,#F7A525,#F9D05A);
+    background:-moz-linear-gradient(right,#F7A525,#F9D05A);
+    background:linear-gradient(to right,#F7A525,#F9D05A);
+    color: #FEF6DC;
+    border: 0 !important;
+}
+.red{
+    color: #F34C51
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #8D8D8D;@include font-dpr(14px);
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#8D8D8D;@include font-dpr(14px);
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color:#8D8D8D;@include font-dpr(14px);
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color:#8D8D8D;@include font-dpr(14px);
+}
+
+
+.no-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    @include font-dpr(14px);
+    color: #999;
+    i{
+        display: inline-block;
+        background: url('../../common/assets/images/nodata.png') 100% 100% no-repeat;
+        width: 1rem;
+        height: 1rem;
+        background-size: cover;
+    }
+}
+// 去掉滚动条
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.mint-toast{
+    word-wrap:break-word
+}
+// 公共分割线样式
+.segmenting_line{
+    border:.013333rem solid #8ADEB0;
+    padding: 0 .266667rem 0;
+    margin: .266667rem 0;
+    line-height: .013333rem;
+    border-left: 2.666667rem solid transparent;
+    border-right: 2.666667rem solid transparent;
+    text-align: center;
+}
+
+// 背景图主绿渐变
+.bg_gradual_change{
+    background:linear-gradient(45deg, #04A45D 30%,#31D595 66%, #52F8BE 100%); 
+}
+// 右上角图标
+.image_top_right{
+    width: .666667rem;
+    height:.666667rem;
+    background: url('../../common/assets/images/apaper_clip.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    float: right;
+    top: -0.186667rem;
+    right: 0.026667rem;
+}
+// 
+img{
+    max-width: 100%;
+}

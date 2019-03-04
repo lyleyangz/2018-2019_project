@@ -1,0 +1,119 @@
+@import "../../../../common/styles/mixin.scss";
+.registerGift{
+    input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: #666666 !important;
+        @include font-dpr(13px);
+    }
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #666666 !important;
+        @include font-dpr(13px);
+    }
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #666666 !important;
+        @include font-dpr(13px);
+    }
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #666666 !important;
+        @include font-dpr(13px);
+    }
+    img{
+        min-height: 6.6rem;
+    }
+    .title{
+        @include font-dpr(17px);
+        margin: .533333rem 0;
+        text-align: center;
+    }
+    .row{
+        align-items: center;
+    }
+    .ipt{
+        padding: 0 1.413333rem;
+        >div{
+            display: flex;
+            align-items: center;
+            >.col{
+                width: 100%;
+                border-bottom: 1px solid #bfbfbf;
+            }
+            input[type="text"],input[type="password"]{
+                width: 100%;
+                height: 1rem;
+                border: 0;
+                @include font-dpr(13px);
+            }   
+        }
+        i{
+            display: inline-block;
+        }
+        .phone{
+            width: .253333rem;
+            height: .373333rem;
+            background: url('../../../../common/assets/images/spread/icon1.png') no-repeat;
+            background-size: cover;
+            margin: 0 .253333rem 0 .133333rem;
+        }
+        .vercode{
+            width: .533333rem;
+            height: .32rem;
+            background: url('../../../../common/assets/images/spread/icon2.png') no-repeat;
+            background-size: cover;
+            margin: 0 .16rem 0 0;
+        }
+        .pwd{
+            width: .346667rem;
+            height: .386667rem;
+            background: url('../../../../common/assets/images/spread/icon3.png') no-repeat;
+            background-size: cover;
+            margin: 0 .226667rem 0 .133333rem;
+        }
+        .code{
+            border-radius: .133333rem;
+            border: solid 1px #008ce6;
+            color: #008ce6;
+            height: .5rem;
+            line-height: .5rem;
+            padding:0 .15rem;
+            @include font-dpr(12px);
+            margin:0 .133333rem 0 0.1rem 0;
+        }
+        .agreement{
+            display: flex;
+            align-items: center;
+            margin-top: .24rem;
+            padding-left: .533333rem;
+            input{
+                border: solid 1px rgba(112, 112, 112, 1);
+                margin: 0 .133333rem 0 .16rem;
+            }
+            a{
+                color: #008ce6;
+            }
+        }
+        .btn{
+            padding: .933333rem .32rem 0 .32rem;
+            div{
+                width: 100%;
+                height: .933333rem;
+                line-height: .933333rem;
+                background-color: #008ce6;
+                border-radius: .053333rem;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+    .login{
+        text-align: center;
+        @include font-dpr(13px);
+        margin: .293333rem 0 0 0;
+        a{
+            color: #008ce6;
+        }
+    }
+    .tip{
+        @include font-dpr(11px);
+        text-align: center;
+        margin-top: .533333rem;
+    }
+}
